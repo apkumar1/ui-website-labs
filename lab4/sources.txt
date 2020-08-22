@@ -1,0 +1,13 @@
+SOURCES
+
+BOOTSTRAP FORMS AND BUTTONS
+https://getbootstrap.com/docs/4.0/components/
+
+IMAGES
+https://unsplash.com/s/photos/long-hair
+
+https://unsplash.com/s/photos/short-hair
+
+https://unsplash.com/s/photos/hair-colour
+
+https://unsplash.com/s/photos/hair-styling

@@ -1,0 +1,43 @@
+/* stylesheet.css */
+body {
+  background-color: white;
+  text-align: center;
+}
+h1 {
+  margin: 10px;
+  padding: 5px;
+  border: 3px solid darksalmon;
+  border-radius: 5px;
+  font-family: "Times New Roman";
+  font-variant: small-caps
+}
+h2 {
+ margin: 4px;
+ padding: 5px;
+ font-size: 90%;
+ font-family: "Lucida Console";
+ text-decoration: underline;
+
+}
+
+h3 {
+ margin: 4px;
+ padding: 5px;
+ font-family: "Lucida Console";
+}
+
+div {
+ text-align: center;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 3px;
+  background-color: darksalmon;
+  font-style: italic;
+  font-family:'Monotype Corsiva','Apple Chancery','ITC Zapf Chancery','URW Chancery L',cursive;
+}

@@ -1,0 +1,101 @@
+<html>
+  <head>
+    <title>Questionnaire</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+  </head>
+  
+  <body>
+    <div style="text-align: center;">
+      <title>Survey for User Interface</title>
+      
+      <h1>Survey for User Interface</h1><br>
+    
+      <h2>Link</h2>
+      <div>Please evaluate this <a href="https://www.reddit.com/">website</a>.</div><br>
+
+      </div>
+      <div style="background-color:whitesmoke; text-align: center;">
+      <h2>Survey</h2><br>
+      <Form>
+        <div style="background-color:whitesmoke"><br>
+          1. What did you notice upon the first glance at the website's user interface design? Please explain here:
+          <textarea cols="50" rows="3" name="explain"></textarea>
+        <br></div><br>
+        
+        <div style="background-color:antiquewhite"><br>
+        <p>2. On the scale from strongly disagree to strongly agree, how do you rank this statement?: "This website user interface is aesthetically pleasing to me."</p>
+        <div>
+          Strongly Disagree
+          <input type="radio" name="likert" value="1" />
+          <input type="radio" name="likert" value="2" />
+          <input type="radio" name="likert" value="3" />
+          <input type="radio" name="likert" value="4" />
+          <input type="radio" name="likert" value="5" />
+          Strongly Agree
+        </div>
+        <br></div><br>
+        
+        <div style="background-color:whitesmoke"><br>
+          3. What did you like most about this website? Select one. 
+          <input type="radio" id="one" name="interest" value="Colour">
+          <label for="one">Colour scheme.</label>
+          <input type="radio" id="two" name="interest" value="Organization">
+          <label for="two">Organization of information.</label>
+          <input type="radio" id="three" name="interest" value="Layout">
+          <label for="three">Layout of the threads. </label>
+          <input type="radio" id="other" name="interest" value="Other">
+          <label for="other">Other.</label>
+        <br></div><br>
+        
+        <div style="background-color:antiquewhite"><br>
+          4. Which aspect of the website needs to be improved? Check all that apply:
+           <input type="checkbox" id="one" name="aspect" value="Fonts">
+           <label for="one">Fonts</label>
+           <input type="checkbox" id="two" name="aspect" value="Colours">
+           <label for="two">Colours</label>
+           <input type="checkbox" id="three" name="aspect" value="Organization">
+           <label for="three">Organization</label>
+           <input type="checkbox" id="four" name="aspect" value="Navigation">
+           <label for="four">Navigation</label>
+           <input type="checkbox" id="five" name="aspect" value="Threads">
+           <label for="five">Threads</label>
+           <input type="checkbox" id="other" name="aspect" value="Other">
+           <label for="other">Other</label>
+        <br></div><br>
+        
+        <div style="background-color:whitesmoke"><br>
+        <label for="general">5. Select how you feel about the aesthetics/design of the user interface of this website:</label>
+        <select id="general" name="general">
+          <option value="None"></option>
+          <option value="Excellent">EXCELLENT: I loved this design. It was very easy to use.</option>
+          <option value="Decent">GOOD: This design was fine and it is usable. </option>
+          <option value="Ok">SATISFACTORY: This design could be better. It was a little difficult to use. </option>
+          <option value="Bad">POOR: This design was poor. It was very difficult to use.</option>
+        </select>
+        <br></div><br>
+        
+        <div style="background-color:antiquewhite"><br>
+        6. Would you like to provide additional suggestions or comments about this website design? Please write here:
+        <textarea cols="50" rows="3" name="comment"></textarea>
+        <br></div><br> 
+        
+<br>
+          <button type="submit" class="btn btn-warning" id="bb">Submit</button>
+      <p id="thanks"></p><br>
+        
+        </Form></div><br><br><br>
+          
+        <div></div>
+        <div></div>
+    
+	<script src="/assets/action.js"></script>
+  </body>
+</html> 

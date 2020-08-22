@@ -1,0 +1,242 @@
+<!-- This file contains many elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+
+<!-- Images source: -->
+<!-- jule.jpg taken from https://www.freepik.com/premium-vector/cartoon-successful-hairdresser_3951066.htm -->
+<!-- Erwind.jpb https://www.kijiji.ca/v-construction-trades-jobs/winnipeg/bicycle-mechanic/1499188319 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- The head should contain an appropriate title for your site -->
+<head>
+    <title>Lab 4 Module 4</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+
+    <!-- Your own additional style sheet -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <!-- Medium size container, padding 3, margins 3, background dark, text is white -->
+    <!-- Should show the name of your company with an image or logo -->
+    <!-- Bootstrap has its own font for H1, H2, p, etc.  -->
+    <!-- Look in BS4 Typography https://www.w3schools.com/bootstrap4/bootstrap_typography.asp -->
+    <!-- Use your own CSS file to change those fonts if they do not correspond to your company's look -->
+    <div class="container-md p-3 my-3 border bg-dark text-white">
+        <h1>Welcome to Ottawa Hair Salon</h1>
+        <p>123 Laurier Avenue East Ottawa L1K 2K8</p>
+    </div>
+    
+    <!-- Bootstrap has components for alerts: https://www.w3schools.com/bootstrap4/bootstrap_alerts.asp  -->
+    <!-- These can be useful for making sure someone reads something before continuing -->
+    <div class="container">
+        <div class="alert alert-danger alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>COVID-19 UPDATES </strong>More Information.
+        </div>
+    </div>
+
+    <!-- Bootstrap has different types of tables https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
+    <!-- Might be (or not) useful to show some information to the user -->
+    <div class="container">
+        <h2>Our Services</h2> 
+        <table class="table table-primary table-hover">
+            <thead>
+            <tr>
+                <th>Service</th>
+                <th>Description</th>
+                <th>Image</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Long-Cut: $35</td>
+                <td>For all long hairstyles</td>
+                <td><img src="images/long.jpg" alt="Long cut" style="width:100px;height:100px;"> </td>
+            </tr>
+            <tr>
+                <td>Short-Cut: $15</td>
+                <td>For all short hairstyles</td>
+                <td><img src="images/short.jpg" alt="Short cut" style="width:100px;height:100px;"> </td>
+            </tr>
+            <tr>
+                <td>Colour: $50-$150</td>
+                <td>All types of colouring (highlights, ombre, & more) </td>
+                <td><img src="images/colour.jpg" alt="Colour" style="width:100px;height:100px;"> </td>
+            </tr>
+            <tr>
+                <td>Styling: $50</td>
+                <td>Professional style (bridal, prom, & more)</td>
+                <td><img src="images/style.jpg" alt="Style" style="width:100px;height:100px;"> </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- Presenting the staff with cards: https://www.w3schools.com/bootstrap4/bootstrap_cards.asp -->
+    <!-- Card columns allows multiple cards next to each other -->
+    <!-- The first card's button doesn't go anywhere, it could be a modal --> 
+    <!-- My second card limits the information seen and uses collapsible to show more -->
+    <div class="container p-3">
+        <h2>Meet our stylists</h2>
+        <div class="card-columns">
+            <div class="card bg-warning" style="width:200px">
+                <img class="card-img-top" src="images/Jule.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Joe</h4>
+                    <p class="card-text">Rank: EXPERT</p>
+                     <p class="card-text">Colour & Style</p>
+                    <a href="#profile1" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+                    <div id="profile1" class="collapse p-3">
+                        <p>Specializes in colour and styling. Over 10 years of experience</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card bg-danger" style="width:200px">
+                <img class="card-img-top" src="images/Jule.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Marc</h4>
+                    <p class="card-text">Rank: EXPERT</p>
+                    <p class="card-text">Curly Hair: Cuts</p>
+                    <!-- collapsible part -->
+                    <a href="#profile2" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+                    <div id="profile2" class="collapse p-3">
+                        <p>Specializes in hair cuts especially with curly hair. Over 25 years of experience. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Collapsible with multiple items - accordion -->
+    <!-- https://www.w3schools.com/bootstrap4/bootstrap_collapse.asp -->
+    <!-- As we want to do a vertical navigation better suited for mobile design, an accordion pattern -->
+    <!-- could work well.  You can use other patterns too.  This is just an example. -->
+    <div class="container">
+        <h2> Book an Appointment TODAY! </h2>
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#collapseService">Choose a service</a>
+                </div>
+                <div id="collapseService" class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1"></label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                              <option>Short hair cut: $15</option>
+                              <option>Long hair cut: $35</option>
+                              <option>Short hair colour: $50</option>
+                              <option>Long hair colour: $150</option>
+                              <option>Styling: $50</option>
+                            </select>
+                          </div>
+                    </div>
+                </div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choose a date</a>
+                </div>
+                <div id="collapseDate" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <!-- Bootstrap has various input components. Some examples are given here: -->
+                        <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
+                        <div class="form-group row">
+                            <label for="dateTimeInput" class="col-2 col-form-label">Date and time</label>
+                            <div class="col-10">
+                                <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="dateTimeInput">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Your information</a>
+                </div>
+                <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>Please enter the following so we can book your appointment!</p>
+                        
+                        <label for="exampleFormControlTextarea1">Your full name</label>
+                        <input class="form-control" type="text" placeholder="Full Name">
+                        
+                        <label for="exampleFormControlTextarea1">Your phone number</label>
+                        <input class="form-control" type="text" placeholder="Phone Number">
+                        
+                        <label for="exampleFormControlTextarea1">Your email</label>
+                        <input class="form-control" type="text" placeholder="Email">
+                        
+                        <label for="exampleFormControlTextarea1">Additional Comments</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        
+                        <br><br>
+                        
+                            <!-- Including a modal https://www.w3schools.com/bootstrap4/bootstrap_modal.asp -->
+                    <!-- Modals are useful for additional information or questions -->
+                    <!-- Here the modal is used for a little survey -->
+                   
+                        <!-- Trigger the modal with a button -->
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mySurvey">Submit</button>
+                        
+                         <!-- Modal -->
+                        <div class="modal fade" id="mySurvey" role="dialog">
+                            <div class="modal-dialog">  
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container">
+                                        <h2>Appointment Confirmed!</h2>
+                                        <p>We will get back to you shortly.</p>
+
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>     
+                        </div>
+                        </div>    
+                    
+                        
+                    </div>
+                </div>
+            </div>    
+            </div>
+    </div>
+        
+        
+    
+    <br><br><br><br><br>
+                    
+    
+        
+<br><br><br><br><br><br>
+<footer class="myfooter">
+    <!-- Bootstrap contains a grid system you can explore https://www.w3schools.com/bootstrap4/bootstrap_grid_system.asp -->
+    <!-- It can be useful for placement of information -->
+    <div class="row p-3" style="text-align: center">
+        <div class="col-sm-3"> <button type="submit" class="btn"></button></div>
+        <div class="col-sm-3"><button type="submit" class=".button4">About Us</button></div>
+        <div class="col-sm-3"><button type="submit" class=".button4">Contact Us</button></div>
+        <div class="col-sm-3"><button type="submit" class="btn"></button></div>
+    </div>
+    
+  ~Site created by A.K.~
+</footer>
+
+</body>
+</html>

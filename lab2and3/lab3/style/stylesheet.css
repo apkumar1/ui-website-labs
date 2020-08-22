@@ -1,0 +1,81 @@
+/* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #fff0e6;
+   text-align: center;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+   text-align: center;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ffcccc;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ff6666;
+   text-align: center;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+   text-align: center;
+}
+
+/* stylesheet.css */
+body {
+  background-color: white;
+  text-align: center;
+}
+h1 {
+  margin: 10px;
+  padding: 5px;
+  border: 3px solid darksalmon;
+  border-radius: 5px;
+  font-family: "Times New Roman";
+  font-variant: small-caps
+}
+h2 {
+ margin: 4px;
+ padding: 5px;
+ font-size: 90%;
+ font-family: "Lucida Console";
+ text-decoration: underline;
+
+}
+
+h3 {
+ margin: 4px;
+ padding: 5px;
+ font-family: "Lucida Console";
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 3px;
+  background-color: darksalmon;
+  font-style: italic;
+  font-family:'Monotype Corsiva','Apple Chancery','ITC Zapf Chancery','URW Chancery L',cursive;
+}

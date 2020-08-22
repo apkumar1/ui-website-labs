@@ -1,0 +1,19 @@
+SOURCES
+
+BOOTSTRAP FORMS AND BUTTONS
+https://getbootstrap.com/docs/4.0/components/
+https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css
+
+IMAGES
+https://unsplash.com/s/photos/long-hair
+
+https://unsplash.com/s/photos/short-hair
+
+https://unsplash.com/s/photos/hair-colour
+
+https://unsplash.com/s/photos/hair-styling
+
+https://unsplash.com/s/photos/hair-dresser
+
+ICONS
+https://dryicons.com/free-icons/

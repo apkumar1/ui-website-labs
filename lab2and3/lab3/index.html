@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "UTF-8">
+  <link rel = "stylesheet"
+   type = "text/css"
+   href = "../lab3/style/stylesheet.css" />
+</head>
+<body>
+  <title>Ottawa Grocery Store</title>
+  
+  <h1>Ottawa Grocery Store</h1><br>
+
+  <!-- Tab links, each one with an onclick event associated with it -->
+  <div class="tab">
+    <button class="tablinks" onclick="openInfo(event, 'Client')">1. Choose your diet preferences</button><br>
+    <button class="tablinks" onclick="openInfo(event, 'Products')">2. Choose products and add them to your cart</button><br>
+    <button class="tablinks" onclick="openInfo(event, 'Cart')">3. View your cart</button><br>
+  </div><br>
+	
+    
+  <!-- Tab content -->
+<div id="Client" class="tabcontent">
+  <h3>Client Preferences</h3>
+  <p>What would you like to shop for?</p>
+	Choose a diet category, and we will create a products list personalized for you:
+	
+	<br>
+	<input type="radio" id="Vegetarian" name="diet" value="Vegetarian" onchange="populateListProductChoices(this.id, 'displayProduct')">
+	<label for="Vegetarian">Vegetarian items only</label><br>
+	
+	<input type="radio" id="GlutenFree" name="diet" value="GlutenFree" onchange="populateListProductChoices(this.id, 'displayProduct')">
+	<label for="GlutenFree">Gluten Free items only</label><br>
+	
+	<input type="radio" id="Organic" name="diet" value="Organic" onchange="populateListProductChoices(this.id, 'displayProduct')">
+	<label for="Organic">Organic items only</label><br>
+	
+	<input type="radio" id="Vegetarian/GlutenFree" name="diet" value="Vegetarian/GlutenFree" onchange="populateListProductChoices(this.id, 'displayProduct')">
+	<label for="Vegetarian/GlutenFree">Vegetarian & Gluten Free only</label><br>
+	
+	<input type="radio" id="Vegetarian/Organic" name="diet" value="Vegetarian/Organic" onchange="populateListProductChoices(this.id, 'displayProduct')">
+	<label for="Vegetarian/Organic">Vegetarian & Organic only</label><br>
+	
+	<input type="radio" id="GlutenFree/Organic" name="diet" value="GlutenFree/Organic" onchange="populateListProductChoices(this.id, 'displayProduct')">
+	<label for="GlutenFree/Organic">Gluten Free & Organic only</label><br>
+	
+	<input type="radio" id="Vegetarian/GlutenFree/Organic" name="diet" value="Vegetarian/GlutenFree/Organic" onchange="populateListProductChoices(this.id, 'displayProduct')">
+	<label for="Vegetarian/GlutenFree/Organic">Vegetarian & Gluten Free & Organic only</label><br>
+	
+	<input type="radio" id="None" name="diet" value="None" onchange="populateListProductChoices(this.id, 'displayProduct')">
+	<label for="None">No specific diet category</label><br>
+	
+	<!--
+	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+		<option value=""></option>
+		<option value="Vegetarian">Vegetarian items only</option>
+    		<option value="GlutenFree">Gluten Free items only</option>
+		<option value="Organic">Organic items only</option>
+		<option value="Vegetarian/GlutenFree">Vegetarian & Gluten Free only</option>
+		<option value="Vegetarian/Organic">Vegetarian & Organic only</option>
+		<option value="GlutenFree/Organic">Gluten Free & Organic only</option>
+		<option value="Vegetarian/GlutenFree/Organic">Vegetarian & Gluten Free & Organic only</option>
+    		<option value="None">No specific diet category</option>
+	</select>
+	-->
+	
+	<br><br><br><br><br><br><br>
+</div>
+
+<div id="Products" class="tabcontent">
+  <h3>Your targeted products</h3>
+  <p>We preselected products based on your preferences in Client Information.</p>
+	 <div id="displayProduct"></div>
+	
+	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
+		Add selected items to cart.
+	</button><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+
+<div id="Cart" class="tabcontent">
+  <h3>Cart</h3>
+  <p>Here is your cart:</p>
+  <div id="displayCart"></div><br><br><br><br><br><br><br><br><br>
+</div>
+
+<script src="../lab3/scripts/groceries.js"></script>
+<script src="../lab3/scripts/main.js"></script>
+	
+  
+<br><br><footer>
+  ~Site created by A.K.~
+</footer>
+  
+</body>
+</html>
